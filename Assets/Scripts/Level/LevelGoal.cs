@@ -7,9 +7,7 @@ public class LevelGoal : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Nivel completado");
-            // Por ahora solo reiniciamos o mostramos log
-            // Luego aquí va UI o siguiente nivel
+            GameManager.instance.WinGame();
         }
     }
 

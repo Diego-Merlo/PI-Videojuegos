@@ -91,4 +91,17 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerRespawn respawn = collision.gameObject.GetComponent<PlayerRespawn>();
+
+            if (respawn != null)
+            {
+                respawn.Respawn();
+            }
+        }
+    }
+
 }

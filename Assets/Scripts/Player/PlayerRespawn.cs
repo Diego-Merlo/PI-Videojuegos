@@ -16,5 +16,7 @@ public class PlayerRespawn : MonoBehaviour
     {
         rb.linearVelocity = Vector2.zero;
         transform.position = respawnPoint;
+
+        GameManager.instance.RegisterDeath();
     }
 }
